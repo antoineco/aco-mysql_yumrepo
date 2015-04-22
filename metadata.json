@@ -1,12 +1,12 @@
 {
   "author": "Antoine Cotten",
-  "license": "Apache License, Version 2.0",
+  "license": "Apache-2.0",
   "name": "aco-mysql_yumrepo",
-  "project_page": "https://github.com/tOnI0/aco-mysql_yumrepo",
-  "source": "git://github.com/tOnI0/aco-mysql_yumrepo.git",
+  "project_page": "https://github.com/antoineco/aco-mysql_yumrepo",
+  "source": "git://github.com/antoineco/aco-mysql_yumrepo.git",
   "summary": "Puppet module for MySQL Community YUM repository",
-  "version": "1.0.1",
-  "tags": ["yum","mysql","fedora","rhel","repo","repository"],
+  "version": "1.1.0",
+  "tags": ["yum","mysql","repository"],
   "dependencies": [],
   "operatingsystem_support": [
     {
@@ -46,7 +46,29 @@
       "operatingsystemrelease": [
         "18",
         "19",
-        "20"
+        "20",
+        "21"
+      ]
+    },
+    {
+      "operatingsystem": "SuSE",
+      "operatingsystemrelease": [
+        "11",
+        "12"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "11",
+        "12"
+      ]
+    },
+    {
+      "operatingsystem": "SLED",
+      "operatingsystemrelease": [
+        "11",
+        "12"
       ]
     }
   ],

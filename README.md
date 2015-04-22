@@ -10,11 +10,11 @@
 
 ##Overview
 
-The mysql_yumrepo module installs the MySQL Community YUM repository on all [RHEL variants](http://en.wikipedia.org/wiki/List_of_Linux_distributions#RHEL-based) including Fedora.
+The mysql_yumrepo module installs the MySQL Community YUM repository on [RHEL variants](http://en.wikipedia.org/wiki/List_of_Linux_distributions#RHEL-based) including Fedora and SuSE Linux.
 
 ##Module description
 
-MySQL Community repositories allow users to get access to the latest MySQL Community releases from Oracle, regardless of their OS version. This module only focuses on systems which use the YUM package manager, ie. RHEL variants.
+MySQL Community repositories allow users to get access to the latest MySQL Community releases from Oracle, regardless of their OS version. This module only focuses on systems which use the YUM package manager, ie. RHEL variants and SuSE Linux.
 
 The following repositories will be enabled by default:
 
