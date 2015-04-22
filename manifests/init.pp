@@ -58,8 +58,9 @@ class mysql_yumrepo (
     'RedHat' : {
       if ($::operatingsystem == 'Fedora' and $::operatingsystemmajrelease >= '18') or $::operatingsystemmajrelease >= '5' {
         $os = $::operatingsystem ? {
-          'Fedora' => 'fc',
-          default  => 'el'
+          /^(SLES|SLED|SuSE)$/ => 'sles',
+          'Fedora'             => 'fc',
+          default              => 'el'
         }
 
         # install YUM repositories
@@ -80,7 +81,7 @@ class mysql_yumrepo (
           enabled => $enable_connectors_src
         }
 
-        unless $os == 'el' and $::operatingsystemmajrelease == '5' {
+        unless ($os == 'el' and $::operatingsystemmajrelease == '5') or ($os == 'sles' and $::operatingsystemmajrelease == '12') {
           yumrepo { 'mysql-tools-community':
             descr   => 'MySQL Tools Community',
             baseurl => "http://repo.mysql.com/yum/mysql-tools-community/${os}/${::operatingsystemmajrelease}/\$basearch/",
@@ -94,7 +95,7 @@ class mysql_yumrepo (
           }
         }
 
-        if $os == 'el' and $::operatingsystemmajrelease >= '6' {
+        if ($os == 'el' and $::operatingsystemmajrelease >= '6') or ($os == 'sles' and $::operatingsystemmajrelease == '11') {
           yumrepo { 'mysql55-community':
             descr   => 'MySQL 5.5 Community Server',
             baseurl => "http://repo.mysql.com/yum/mysql-5.5-community/${os}/${::operatingsystemmajrelease}/\$basearch/",
