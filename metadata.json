@@ -5,7 +5,7 @@
   "project_page": "https://github.com/antoineco/aco-mysql_yumrepo",
   "source": "git://github.com/antoineco/aco-mysql_yumrepo.git",
   "summary": "Puppet module for MySQL Community YUM repository",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "tags": ["yum","mysql","repository"],
   "dependencies": [],
   "operatingsystem_support": [
@@ -47,7 +47,10 @@
         "18",
         "19",
         "20",
-        "21"
+        "21",
+        "22",
+        "23",
+        "24"
       ]
     },
     {

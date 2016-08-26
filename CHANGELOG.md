@@ -1,3 +1,10 @@
+###1.2.0
+
+* Use MySQL 5.7 stable repository and enable it by default
+* Update GPG key
+* Add Tools Preview repository
+* Support recent Fedora releases
+
 ###1.1.0
 
 Support SuSE Linux and Fedora 21
